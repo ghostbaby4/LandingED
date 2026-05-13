@@ -1,0 +1,112 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(to right, #ffffff, #0f183a);
+}
+
+.contact-section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact-section__container {
+  display: flex;
+  gap: 60px;
+  max-width: 1200px;
+  width: 100%;
+  padding: 40px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.contact-section__info {
+  flex: 1;
+}
+
+.contact-section__title {
+  font-size: 2.5rem;
+  color: #081b29;
+  margin-bottom: 15px;
+}
+
+.contact-section__text {
+  color: #555;
+  line-height: 1.5;
+}
+
+.contact-section__form {
+  flex: 1;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.contact-section__group {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-section__field {
+  width: 100%; 
+}
+
+.contact-section__field input,
+.contact-section__field textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  box-sizing: border-box; /* 👈 CLAVE */
+}
+
+.contact-section__field input:focus,
+.contact-section__field textarea:focus {
+  border-color: #4a7fc1;
+  box-shadow: 0 0 0 2px rgba(74,127,193,0.2);
+}
+
+.contact-section__field:nth-child(4) {
+  grid-column: span 2;
+}
+
+.contact-section__field textarea {
+  min-height: 120px;
+  resize: none;
+}
+
+.contact-section__btn {
+  width: auto;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 25px; 
+  background: #081b29;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+  align-self: center;
+}
+
+.contact-section__btn:hover {
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .contact-section__container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact-section__group {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-section__field:nth-child(4),
+  .contact-section__btn {
+    grid-column: span 1;
+  }
+}

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tecnologia A Tu Alcance</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"/>
+</head>
+<body>
+    <!------Aquí inicia la sección del menú horizontal------>
+    <header class="landing-header">
+      <a href="#" class="landing-header__logo"><img src="img/newEDR.png" alt="Logo"></a>
+      <nav class="landing-header__nav">
+        <ul class="nav__list--horizontal">
+          <li><a href="#">Inicio</a></li>
+          <li><a href="login.html">Iniciar Sesión</a></li>
+          <li>
+            <a href="#">plataforma</a>
+            <ul class="nav__submenu nav__submenu--vertical">
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#how-section">¿Por qué Elegirnos?</a></li>
+            <li><a href="#cards__header">Objetivos</a></li>
+            <li><a href="#trabajos">Trabajos Realizados</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!------Aquí termina la sección del menú horizontal------>
+
+    <!------Aquí inicia la sección de la vista principal------>
+    <section class="landing-home animate__animated">
+      <div class="landing-home__content">
+        <h1 class="landing-home__title">Bienvenido</h1>
+        <h3 class="landing-home__subtitle">EraDigital</h3>
+        <p class="landing-home__description">
+          ¿Problemas con tus equipos o red?
+          En Era Digital te ofrecemos soluciones rápidas y profesionales para que sigas trabajando sin interrupciones.
+           Soporte técnico, reparación e instalación de redes con atención personalizada y eficiente.
+        </p>
+        <div class="landing-home__btn-box">
+          <a href="login.html" class="landing-home__btn">Registrarse</a>
+          <a href="contact.html" class="landing-home__btn">Contacto</a>
+        </div>
+      </div>
+      <div class="landing-home__social">
+        <a href="#"><i class="bx bxl-facebook-circle"></i></a>
+        <a href="#"><i class="bx bxl-twitter"></i></a>
+        <a href="#"><i class="bx bxl-instagram"></i></a>
+      </div>
+    </section>
+    <!-------------END PRINCIPAL SECTION------------->
+
+    <!--------------SECTION SERVICES------------->
+    <div class="landing-services animate__animated" id="servicios">
+      <h1 class="landing-services__title">Nuestros Servicios</h1>
+      <div class="landing-services__row">
+        <div class="landing-services__item">
+          <i class="fa-solid fa-laptop"></i>
+          <h2>Matenimiento a Domicilio</h2>
+          <p>Ofrecemos soporte técnico y mantenimiento preventivo a domicilio, realizando diagnóstico, solución de fallas y limpieza de equipos</p>
+        </div>
+        <div class="landing-services__item">
+          <i class="fa-solid fa-laptop"></i>
+          <h2>Soporte Técnico en Línea</h2>
+          <p>De manera remota atendemos problemas básicos que presenten los equipos a un precio accesible</p>
+        </div>
+        <div class="landing-services__item">
+          <i class="fa-solid fa-laptop"></i>
+          <h2>Instalación de Redes Estructuradas</h2>
+          <p>Diseñamos e instalamos todo tipo de redes estructuradas, tanto en fibra óptica o cables de cobre UTP, como redes WIFI</p>
+        </div>
+        <div class="landing-services__item">
+          <i class="fa-solid fa-laptop"></i>
+          <h2>Reparación de Equipos Informáticos</h2>
+          <p>Somos la única empresa especializada en brindar servicios de reparación en equipos MAC y Windows</p>
+        </div>
+      </div>
+    </div>
+            <!--------------END SECTION SERVICESS------------->         
+            
+       <!-------------HOW SECTION------------->
+    <section class="how-section" id="how-section">
+      <h1 class="how-section__title"><span>¿Por qué</span> elegirnos?</h1>
+      <div class="how-section__row">
+        <div class="how-section__video-contain">
+          <video src="img/how.mp4" loop autoplay muted></video>
+        </div>
+        <div class="how-section__content">
+          <h3>Tu camino con EraDigital</h3>
+          <p>En Era Digital realizamos un diagnóstico técnico detallado para identificar con precisión la falla,
+             seguido de una evaluación profesional que nos permite aplicar la solución más adecuada.
+              Ejecutamos cada servicio con altos estándares de calidad, garantizando el óptimo funcionamiento 
+              de los equipos y brindando recomendaciones especializadas para asegurar su rendimiento y continuidad operativa.</p>
+          <a href="#" class="how-section__content--btn">Leer más</a>
+        </div>
+      </div>
+    </section>
+    <!-------------END HOW SECTION------------->
+
+    <!-------------PRICING SECTION------------->
+    <section class="pricing" id="pricing">
+  <h2 class="pricing__title">Nuestros Servicios</h2>
+
+  <div class="pricing__container">
+
+    <div class="pricing__card">
+      <h3 class="pricing__name">Soporte Técnico a Domicilio</h3>
+      <p class="pricing__price">C$500</p>
+      <ul class="pricing__features">
+        <li>Diagnóstico de fallas</li>
+        <li>Reparación en sitio</li>
+        <li>Atención personalizada</li>
+      </ul>
+      <button class="pricing__btn">Solicitar</button>
+    </div>
+
+    <div class="pricing__card pricing__card--active">
+      <h3 class="pricing__name">Mantenimiento Preventivo</h3>
+      <p class="pricing__price">C$400</p>
+      <ul class="pricing__features">
+        <li>Limpieza interna</li>
+        <li>Optimización del sistema</li>
+        <li>Mayor rendimiento</li>
+      </ul>
+      <button class="pricing__btn">Solicitar</button>
+    </div>
+
+    <div class="pricing__card">
+      <h3 class="pricing__name">Soporte Técnico en Línea</h3>
+      <p class="pricing__price">C$250</p>
+      <ul class="pricing__features">
+        <li>Asistencia remota</li>
+        <li>Solución rápida</li>
+        <li>Disponible 24/7</li>
+      </ul>
+      <button class="pricing__btn">Solicitar</button>
+    </div>
+
+    <div class="pricing__card">
+      <h3 class="pricing__name">Redes Estructuradas</h3>
+      <p class="pricing__price">Desde C$800</p>
+      <ul class="pricing__features">
+        <li>Instalación profesional</li>
+        <li>Configuración de red</li>
+        <li>Alta estabilidad</li>
+      </ul>
+      <button class="pricing__btn">Solicitar</button>
+    </div>
+  </div>
+</section>
+<!-------------END HOW SECTION------------->
+
+<!-- CLIENTES Y TESTIMONIOS -->
+<section class="testimonials-section" id="clientes">
+    <h2 class="testimonials-section__title">
+         Nuestros <span>clientes</span>
+    </h2>
+    <p class="testimonials-section__subtitle">
+        Empresas y clientes que han confiado en EraDigital
+    </p>
+    <div class="testimonials-section__container">
+        <div class="testimonial-card">
+            <div class="testimonial-card__logo">
+                <img src="img/empresa1.png" alt="">
+            </div>
+            <div class="testimonial-card__stars">★★★★★</div>
+            <p class="testimonial-card__text">
+                Excelente servicio y atención rápida. Nos ayudaron a resolver problemas técnicos de forma eficiente.
+            </p>
+            <h3 class="testimonial-card__name">
+                Jasmir Martínez
+            </h3>
+            <span class="testimonial-card__company">
+                Empresa OFG
+            </span>
+        </div>
+        
+        <div class="testimonial-card">
+            <div class="testimonial-card__logo">
+                <img src="img/empresa2.jpg" alt="">
+            </div>
+            <div class="testimonial-card__stars">★★★★★</div>
+            <p class="testimonial-card__text">
+                EraDigital mejoró completamente nuestro soporte técnico y la comunicación fue excelente.
+            </p>
+            <h3 class="testimonial-card__name">
+                Andrea Miranda
+            </h3>
+            <span class="testimonial-card__company">
+                Lancasco
+            </span>
+        </div>
+        
+        <div class="testimonial-card">
+            <div class="testimonial-card__logo">
+                <img src="img/empresa3.png" alt="">
+            </div>
+            <div class="testimonial-card__stars">★★★★★</div>
+            <p class="testimonial-card__text">
+                Muy profesionales y organizados. El servicio fue rápido y confiable.
+            </p>
+            <h3 class="testimonial-card__name">
+                Antonio Hernández
+            </h3>
+            <span class="testimonial-card__company">
+                Carnes San Martin
+            </span>
+        </div>
+    </div>
+</section>
+    
+    <!--Footer-->
+    <footer class="footer">
+  <div class="footer_container">
+    <a href="#" class="footer__NH">EraDigital</a>
+    <ul class="footer__menu">
+      <li><a href="#">Inicio</a></li>
+      <li><a href="#">Servicio</a></li>
+      <li><a href="#">Contacto</a></li>
+    </ul>
+    <div class="footer__media-icons">
+      <a href="#"><i class="bx bxl-facebook-circle"></i></a>
+      <a href="#"><i class="bx bxl-twitter"></i></a>
+      <a href="#"><i class="bx bxl-instagram"></i></a>
+    </div>
+    <p>Tecnología a tu Alcance</p>
+    <p class="mb-0">&copy; 2025 EraDigital - Todos los derechos reservados</p>
+  </div>
+</footer>
+  <!--END Footer-->
+
+    <script src="scripts.js"></script>
+</body>
+</html>
