@@ -11,24 +11,58 @@
 </head>
 <body>
     <!------Aquí inicia la sección del menú horizontal------>
-    <header class="landing-header">
-      <a href="#" class="landing-header__logo"><img src="img/newEDR.png" alt="Logo"></a>
-      <nav class="landing-header__nav">
+
+<header class="landing-header">
+
+    <!-- LOGO -->
+    <a href="#" class="landing-header__logo">
+        <img src="img/newEDR.png" alt="EraDigital Logo">
+    </a>
+
+    <!-- MENU -->
+    <nav class="landing-header__nav">
+
         <ul class="nav__list--horizontal">
-          <li><a href="#">Inicio</a></li>
-          <li><a href="login.html">Iniciar Sesión</a></li>
-          <li>
-            <a href="#">plataforma</a>
-            <ul class="nav__submenu nav__submenu--vertical">
-            <li><a href="#servicios">Servicios</a></li>
-            <li><a href="#how-section">¿Por qué Elegirnos?</a></li>
-            <li><a href="#pricing">Nuestros Precios</a></li>
-            <li><a href="#clientes">Clientes</a></li>
-            </ul>
-          </li>
+
+            <li>
+                <a href="#">Inicio</a>
+            </li>
+
+            <li>
+                <a href="#servicios">Servicios</a>
+            </li>
+
+            <li>
+                <a href="#how-section">
+                    ¿Por qué elegirnos?
+                </a>
+            </li>
+
+            <li>
+                <a href="#pricing">
+                    Precios
+                </a>
+            </li>
+
+            <li>
+                <a href="#clientes">
+                    Clientes
+                </a>
+            </li>
+
+            <li>
+                <a href="login.html" class="nav__login-btn">
+                    Iniciar Sesión
+                </a>
+            </li>
+
         </ul>
-      </nav>
-    </header>
+
+    </nav>
+
+</header>
+
+<!------ END HEADER ------>
     <!------Aquí termina la sección del menú horizontal------>
 
     <!------Aquí inicia la sección de la vista principal------>
@@ -59,12 +93,12 @@
       <h1 class="landing-services__title">Nuestros Servicios</h1>
       <div class="landing-services__row">
         <div class="landing-services__item">
-          <i class="fa-solid fa-laptop"></i>
+          <i class="fa-solid fa-house"></i>
           <h2>Matenimiento a Domicilio</h2>
           <p>Ofrecemos soporte técnico y mantenimiento preventivo a domicilio, realizando diagnóstico, solución de fallas y limpieza de equipos</p>
         </div>
         <div class="landing-services__item">
-          <i class="fa-solid fa-laptop"></i>
+          <i class="bx bx-support"></i>
           <h2>Soporte Técnico en Línea</h2>
           <p>De manera remota atendemos problemas básicos que presenten los equipos a un precio accesible</p>
         </div>
@@ -74,7 +108,7 @@
           <p>Diseñamos e instalamos todo tipo de redes estructuradas, tanto en fibra óptica o cables de cobre UTP, como redes WIFI</p>
         </div>
         <div class="landing-services__item">
-          <i class="fa-solid fa-laptop"></i>
+          <i class="bx bx-wrench"></i>
           <h2>Reparación de Equipos Informáticos</h2>
           <p>Somos la única empresa especializada en brindar servicios de reparación en equipos MAC y Windows</p>
         </div>
@@ -115,7 +149,7 @@
         <li>Reparación en sitio</li>
         <li>Atención personalizada</li>
       </ul>
-      <button class="pricing__btn">Solicitar</button>
+      <a href="contact.html" class="pricing__btn">Solicitar</a>
     </div>
 
     <div class="pricing__card pricing__card--active">
@@ -126,7 +160,7 @@
         <li>Optimización del sistema</li>
         <li>Mayor rendimiento</li>
       </ul>
-      <button class="pricing__btn">Solicitar</button>
+      <a href="contact.html" class="pricing__btn">Solicitar</a>
     </div>
 
     <div class="pricing__card">
@@ -137,7 +171,7 @@
         <li>Solución rápida</li>
         <li>Disponible 24/7</li>
       </ul>
-      <button class="pricing__btn">Solicitar</button>
+      <a href="contact.html" class="pricing__btn">Solicitar</a>
     </div>
 
     <div class="pricing__card">
@@ -148,7 +182,7 @@
         <li>Configuración de red</li>
         <li>Alta estabilidad</li>
       </ul>
-      <button class="pricing__btn">Solicitar</button>
+      <a href="contact.html" class="pricing__btn">Solicitar</a>
     </div>
   </div>
 </section>

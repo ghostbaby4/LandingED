@@ -67,40 +67,123 @@ html {
 /************End Menu Section***********/
 
 /************ Submenu Section***********/
-.nav__submenu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    display: none;
-    flex-direction: column;
-    list-style: none;
-    min-width: 220px;
-    background-color: rgba(22, 36, 71, 0.5); 
-    backdrop-filter: blur(10px); 
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    border-radius: 6px;
-    padding: 5px 0;
-    z-index: 999;
-}
-.nav__submenu--vertical li {
+/************ HEADER ************/
+.landing-header{
     width: 100%;
+    padding: 1.2rem 8%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    z-index: 1000;
+
+    transition: .4s ease;
+
+    background: transparent;
 }
 
-.nav__submenu--vertical li a {
-    display: block;
-    color: #ededed;
-    font-weight: 500;
-    padding: 12px 20px;
-    text-decoration: none;
-    transition: background-color 0.2s, color 0.2s;
-    border-radius: 4px;
+/************ HEADER SCROLL ************/
+.landing-header.scrolled{
+    background: rgba(240, 243, 250, 0.95);
+    backdrop-filter: blur(10px);
+
+    box-shadow: 0 2px 10px rgba(0,0,0,.05);
 }
-.nav__submenu--vertical li a:hover {
-    background-color: #ededed;
+
+/************ LOGO ************/
+.landing-header__logo img{
+    width: 160px;
+    object-fit: contain;
+}
+
+/************ NAV ************/
+.landing-header__nav{
+    display: flex;
+    align-items: center;
+}
+
+.nav__list--horizontal{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    list-style: none;
+}
+
+.nav__list--horizontal li a{
+    text-decoration: none;
+    color: #F0F3FA;
+
+    font-size: .95rem;
+    font-weight: 500;
+
+    transition: .3s ease;
+}
+
+/************ COLOR AL HACER SCROLL ************/
+.landing-header.scrolled .nav__list--horizontal li a{
     color: #162447;
 }
-.nav__list--horizontal > li:hover > .nav__submenu {
-    display: flex;
+
+.nav__list--horizontal li a:hover{
+    color: #567c8d;
+}
+
+/************ LOGIN BUTTON ************/
+.nav__login-btn{
+    background: #162447;
+    color: #F0F3FA !important;
+
+    padding: .8rem 1.5rem;
+    border-radius: 2rem;
+
+    transition: .3s ease;
+}
+
+.nav__login-btn:hover{
+    background: #567c8d;
+}
+
+/************ RESPONSIVE ************/
+@media (max-width: 900px){
+
+    .landing-header{
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem 5%;
+    }
+
+    .nav__list--horizontal{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+}
+
+@media (max-width: 500px){
+
+    .landing-header__logo img{
+        width: 130px;
+    }
+
+    .nav__list--horizontal{
+        gap: .8rem;
+    }
+
+    .nav__list--horizontal li a{
+        font-size: .85rem;
+    }
+
+    .nav__login-btn{
+        padding: .7rem 1.2rem;
+    }
+
 }
 /************End submenu Section***********/
 
@@ -446,6 +529,8 @@ html {
   color: #fff;
   cursor: pointer;
   transition: 0.3s;
+  text-decoration: none;
+  display: inline-block;
 }
 .pricing__btn:hover {
   background: #4a7fc1;
