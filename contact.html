@@ -5,6 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contacto</title>
   <link rel="stylesheet" href="stylecontact.css">
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GVBNVKZS9V"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GVBNVKZS9V');
+</script>
 </head>
 <body>
 
@@ -19,28 +28,28 @@
       </p>
     </div>
 
-    <form class="contact-section__form">
+    <form  id="contactForm" class="contact-section__form">
 
       <div class="contact-section__group">
 
         <div class="contact-section__field">
-          <input type="text" placeholder="Nombre" required>
+          <input type="text" id="nombre" placeholder="Nombre" required>
         </div>
 
         <div class="contact-section__field">
-          <input type="text" placeholder="Apellido" required>
+          <input type="text" id="apellido" placeholder="Apellido" required>
         </div>
 
         <div class="contact-section__field">
-          <input type="tel" placeholder="Teléfono" required>
+          <input type="tel" id="telefono" placeholder="Teléfono" required>
         </div>
 
         <div class="contact-section__field">
-          <input type="email" placeholder="Correo electrónico" required>
+          <input type="email" id="correo" placeholder="Correo electrónico" required>
         </div>
 
         <div class="contact-section__field">
-          <select required>
+          <select id="tipo_cliente" required>
             <option value="" disabled selected>
               Tipo de cliente
             </option>
@@ -56,47 +65,45 @@
         </div>
 
         <div class="contact-section__field">
-          <select required>
+          <select id="departamento" required>
 
             <option value="" disabled selected>
               Departamento
             </option>
 
-            <option>Managua</option>
-            <option>León</option>
-            <option>Granada</option>
-            <option>Masaya</option>
-            <option>Carazo</option>
-            <option>Chinandega</option>
-            <option>Estelí</option>
-            <option>Matagalpa</option>
-            <option>Jinotega</option>
-            <option>Boaco</option>
-
+            <option value="Managua">Managua</option>
+            <option value="León">León</option>
+            <option value="Granada">Granada</option>
+            <option value="Masaya">Masaya</option>
+            <option value="Carazo">Carazo</option>
+            <option value="Chinandega">Chinandega</option>
+            <option value="Estelí">Estelí</option>
+            <option value="Matagalpa">Matagalpa</option>
+            <option value="Jinotega">Jinotega</option>
+            <option value="Boaco">Boaco</option>
           </select>
         </div>
 
         <div class="contact-section__field">
-          <select required>
+          <select id="servicio" required>
 
             <option value="" disabled selected>
               Servicio de interés
             </option>
 
-            <option>Soporte técnico a domicilio</option>
-            <option>Mantenimiento preventivo</option>
-            <option>Soporte técnico en línea</option>
-            <option>Instalación de redes</option>
-            <option>Reparación de equipos</option>
+            <option value="Soporte técnico">Soporte técnico</option>
+            <option value="Mantenimiento preventivo">Mantenimiento preventivo</option>
+            <option value="Instalación de redes">Instalación de redes</option>
+            <option value="Reparación de equipos">Reparación de equipos</option>
 
           </select>
         </div>
 
         <div class="contact-section__field">
-          <textarea rows="5" placeholder="Cuéntanos qué necesitas o el problema que presentas"></textarea>
+          <textarea id="comentario" rows="5" placeholder="Cuéntanos qué necesitas o el problema que presentas"></textarea>
         </div>
 
-        <button class="contact-section__btn">
+        <button type="submit" class="contact-section__btn">
           Enviar mensaje
         </button>
 
@@ -106,6 +113,7 @@
 
   </div>
 </section>
-
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="scripts.js"></script>
 </body>
 </html>
