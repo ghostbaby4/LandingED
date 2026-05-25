@@ -34,7 +34,7 @@ if (form) {
     try {
 
       const response = await fetch(
-        'http://127.0.0.1:8000/catalogo/contactos/',
+        'https://eradigital-api.onrender.com/catalogo/contactos/',
         {
 
           method: 'POST',
