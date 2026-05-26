@@ -9,6 +9,11 @@ if (form) {
 
     e.preventDefault();
 
+    const boton = form.querySelector('button');
+
+    boton.disabled = true;
+    boton.innerText = 'Enviando...';
+
     const data = {
 
       nombre: document.getElementById('nombre').value,
@@ -91,6 +96,42 @@ if (form) {
 }
 ///// Fin conexión API formulario
 
+//// Inicio animación LOGIN
+
+const container = document.getElementById('container');
+const registerBtn = document.getElementById('register');
+const loginBtn = document.getElementById('login');
+
+if(container && registerBtn && loginBtn){
+
+    registerBtn.addEventListener('click', () => {
+        container.classList.add("active");
+    });
+
+    loginBtn.addEventListener('click', () => {
+        container.classList.remove("active");
+    });
+
+}
+
+//// Fin animación LOGIN
+
+
+//// Responsive Menu
+
+const menuToggle = document.getElementById('menu-toggle');
+const navbar = document.querySelector('.landing-header__nav');
+
+if(menuToggle && navbar){
+
+    menuToggle.addEventListener('click', () => {
+        navbar.classList.toggle('active');
+    });
+
+}
+
+//// Fin Responsive Menu
+
 
 //// Navbar Scroll
 window.addEventListener('scroll', function(){
@@ -103,20 +144,6 @@ window.addEventListener('scroll', function(){
   }
 });
 
-
-////Inicio de animación LOGIN
-const container = document.getElementById('container');
-const registerBtn = document.getElementById('register');
-const loginBtn = document.getElementById('login');
-
-registerBtn.addEventListener('click', () => {
-    container.classList.add("active");
-});
-
-loginBtn.addEventListener('click', () => {
-    container.classList.remove("active");
-});
-////Fin de la animación LOGIN
 
 
 ///// Inicio de función de scroll
@@ -146,5 +173,6 @@ document.addEventListener('DOMContentLoaded', () => {
   animarAlScroll(seccionServicios, 'animate__fadeInLeftBig');
 });
 /////Fin de la animación scroll
+
 
 
