@@ -8,31 +8,41 @@
 }
 
 body{
-    background-color: #c9d6ff;
     background: linear-gradient(to right, #e2e2e2, #b5c3f1);
+
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-    height: 100vh;
+
+    min-height: 100vh;
+
+    padding: 2rem 1rem;
 }
 
 .container{
     background-color: #fff;
+
     border-radius: 30px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+
     position: relative;
+
     overflow: hidden;
-    width: 768px;
+
+    width: 850px;
     max-width: 100%;
-    min-height: 480px;
+
+    min-height: 550px;
 }
 
 .container p{
     font-size: 14px;
     line-height: 20px;
+
     letter-spacing: 0.3px;
-    margin: 20px 0;
+
+    margin: 15px 0;
 }
 
 .container span{
@@ -41,23 +51,42 @@ body{
 
 .container a{
     color: #333;
+
     font-size: 13px;
+
     text-decoration: none;
+
     margin: 15px 0 10px;
 }
 
 .container button{
     background-color: #162447;
+
     color: #fff;
+
     font-size: 12px;
-    padding: 10px 45px;
+
+    padding: 12px 45px;
+
     border: 1px solid transparent;
-    border-radius: 8px;
+
+    border-radius: 10px;
+
     font-weight: 600;
+
     letter-spacing: 0.5px;
+
     text-transform: uppercase;
+
     margin-top: 10px;
+
     cursor: pointer;
+
+    transition: .3s ease;
+}
+
+.container button:hover{
+    background-color: #1f3566;
 }
 
 .container button.hidden{
@@ -67,35 +96,49 @@ body{
 
 .container form{
     background-color: #fff;
+
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+
     padding: 0 40px;
+
     height: 100%;
 }
 
 .container input{
-    background-color: #eee;
+    background-color: #f3f3f3;
+
     border: none;
+
     margin: 8px 0;
-    padding: 10px 15px;
+
+    padding: 12px 15px;
+
     font-size: 13px;
-    border-radius: 8px;
+
+    border-radius: 10px;
+
     width: 100%;
+
     outline: none;
 }
 
 .form-container{
     position: absolute;
+
     top: 0;
+
     height: 100%;
+
     transition: all 0.6s ease-in-out;
 }
 
 .sign-in{
     left: 0;
     width: 50%;
+
     z-index: 2;
 }
 
@@ -106,14 +149,19 @@ body{
 .sign-up{
     left: 0;
     width: 50%;
+
     opacity: 0;
+
     z-index: 1;
 }
 
 .container.active .sign-up{
     transform: translateX(100%);
+
     opacity: 1;
+
     z-index: 5;
+
     animation: move 0.6s;
 }
 
@@ -122,6 +170,7 @@ body{
         opacity: 0;
         z-index: 1;
     }
+
     50%, 100%{
         opacity: 1;
         z-index: 5;
@@ -134,42 +183,58 @@ body{
 
 .social-icons a{
     border: 1px solid #ccc;
-    border-radius: 20%;
+
+    border-radius: 12px;
+
     display: inline-flex;
+
     justify-content: center;
     align-items: center;
-    margin: 0 3px;
+
+    margin: 0 5px;
+
     width: 40px;
     height: 40px;
 }
 
 .toggle-container{
     position: absolute;
+
     top: 0;
     left: 50%;
+
     width: 50%;
     height: 100%;
+
     overflow: hidden;
+
     transition: all 0.6s ease-in-out;
+
     border-radius: 150px 0 0 100px;
+
     z-index: 1000;
 }
 
 .container.active .toggle-container{
     transform: translateX(-100%);
+
     border-radius: 0 150px 100px 0;
 }
 
 .toggle{
-    background-color: #162447;
-    height: 100%;
     background: linear-gradient(to right, rgb(11, 17, 53), #1b2c55);
+
     color: #fff;
+
     position: relative;
+
     left: -100%;
+
     height: 100%;
     width: 200%;
+
     transform: translateX(0);
+
     transition: all 0.6s ease-in-out;
 }
 
@@ -179,16 +244,21 @@ body{
 
 .toggle-panel{
     position: absolute;
+
     width: 50%;
     height: 100%;
+
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+
     padding: 0 30px;
+
     text-align: center;
+
     top: 0;
-    transform: translateX(0);
+
     transition: all 0.6s ease-in-out;
 }
 
@@ -202,9 +272,260 @@ body{
 
 .toggle-right{
     right: 0;
-    transform: translateX(0);
 }
 
 .container.active .toggle-right{
     transform: translateX(200%);
+}
+
+@media (max-width: 768px){
+
+    body{
+        padding: 1rem;
+    }
+
+    .container{
+        width: 100%;
+        min-height: auto;
+
+        border-radius: 20px;
+    }
+
+    .form-container{
+        position: relative;
+
+        width: 100%;
+        height: auto;
+
+        transform: none !important;
+    }
+
+    .sign-in,
+    .sign-up{
+        width: 100%;
+
+        position: relative;
+
+        opacity: 1;
+
+        z-index: 1;
+    }
+
+    .sign-up{
+        display: none;
+    }
+
+    .container.active .sign-up{
+        display: flex;
+    }
+
+    .container.active .sign-in{
+        display: none;
+    }
+
+    .container form{
+        padding: 2rem;
+    }
+
+    .toggle-container{
+        position: relative;
+
+        width: 100%;
+        height: auto;
+
+        left: 0;
+
+        border-radius: 0;
+
+        overflow: visible;
+    }
+
+    .toggle{
+        position: relative;
+
+        width: 100%;
+        height: auto;
+
+        left: 0;
+
+        transform: none !important;
+
+        border-radius: 0 0 20px 20px;
+    }
+
+    .toggle-panel{
+        position: relative;
+
+        width: 100%;
+        height: auto;
+
+        transform: none !important;
+
+        padding: 2rem;
+
+        display: none;
+    }
+
+    .toggle-right{
+        display: flex;
+    }
+
+    .container.active .toggle-right{
+        display: none;
+    }
+
+    .container.active .toggle-left{
+        display: flex;
+    }
+
+}
+
+@media (max-width: 480px){
+
+    .container form{
+        padding: 1.5rem;
+    }
+
+    .container h1{
+        font-size: 1.7rem;
+    }
+
+    .container p{
+        font-size: 13px;
+    }
+
+    .container button{
+        width: 100%;
+    }
+
+}
+@media (max-width: 768px){
+
+    body{
+        padding: 1rem;
+        height: auto;
+    }
+
+    .container{
+        width: 100%;
+        min-height: auto;
+
+        display: flex;
+        flex-direction: column;
+
+        overflow: hidden;
+    }
+
+    .form-container,
+    .sign-in,
+    .sign-up,
+    .toggle-container,
+    .toggle,
+    .toggle-panel{
+        position: relative !important;
+
+        width: 100% !important;
+        height: auto !important;
+
+        top: unset !important;
+        left: unset !important;
+        right: unset !important;
+
+        transform: none !important;
+
+        opacity: 1 !important;
+    }
+
+    .form-container{
+        display: none;
+
+        padding: 2rem 0;
+    }
+
+    .sign-in{
+        display: flex;
+    }
+
+    .container.active .sign-in{
+        display: none;
+    }
+
+    .container.active .sign-up{
+        display: flex;
+    }
+
+    .container:not(.active) .sign-in{
+        display: flex;
+    }
+
+    .container:not(.active) .sign-up{
+        display: none;
+    }
+
+    .container form{
+        width: 100%;
+        padding: 0 2rem;
+    }
+
+    .toggle-container{
+        background: linear-gradient(to right, rgb(11, 17, 53), #1b2c55);
+
+        color: white;
+    }
+
+    .toggle{
+        background: transparent;
+        width: 100%;
+    }
+
+    .toggle-panel{
+        display: none;
+
+        padding: 2rem;
+
+        text-align: center;
+    }
+
+    .toggle-right{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .container.active .toggle-right{
+        display: none;
+    }
+
+    .container.active .toggle-left{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+}
+
+@media (max-width: 480px){
+
+    .container{
+        border-radius: 20px;
+    }
+
+    .container form{
+        padding: 0 1.5rem;
+    }
+
+    .container h1{
+        font-size: 1.6rem;
+    }
+
+    .container p{
+        font-size: 13px;
+    }
+
+    .container button{
+        width: 100%;
+    }
+
 }
