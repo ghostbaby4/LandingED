@@ -8,7 +8,14 @@
 
 body{
     font-family:'Poppins',sans-serif;
-    background:#F0F3FA;
+
+    background:
+    linear-gradient(
+        135deg,
+        #F0F3FA 0%,
+        #E7EDF8 100%
+    );
+
     min-height:100vh;
 
     display:flex;
@@ -29,38 +36,44 @@ body{
 .contact-section__container{
 
     width:100%;
-    max-width:1150px;
+    max-width:1080px;
 
-    background:#fff;
+    background:rgba(255,255,255,.82);
 
-    border-radius:30px;
+    backdrop-filter:blur(10px);
+
+    border-radius:28px;
 
     overflow:hidden;
 
     display:grid;
-    grid-template-columns: 1fr 1.1fr;
+    grid-template-columns:.95fr 1.05fr;
+
+    border:1px solid rgba(255,255,255,.4);
 
     box-shadow:
-    0 10px 40px rgba(15,23,42,.06),
-    0 20px 80px rgba(15,23,42,.08);
+    0 10px 30px rgba(15,23,42,.04),
+    0 20px 60px rgba(15,23,42,.06);
 }
 
 .contact-section__info{
 
     background:
     linear-gradient(
-        135deg,
+        160deg,
         #162447 0%,
-        #1f4068 100%
+        #1b2c55 100%
     );
 
-    padding:4rem;
+    padding:3.5rem;
 
     display:flex;
     flex-direction:column;
     justify-content:center;
 
     position:relative;
+
+    overflow:hidden;
 }
 
 .contact-section__info::before{
@@ -68,12 +81,12 @@ body{
 
     position:absolute;
 
-    width:320px;
-    height:320px;
+    width:280px;
+    height:280px;
 
     border-radius:50%;
 
-    background:rgba(255,255,255,.05);
+    background:rgba(255,255,255,.03);
 
     top:-120px;
     right:-120px;
@@ -89,40 +102,55 @@ body{
 
     border-radius:50%;
 
-    background:rgba(255,255,255,.04);
+    background:rgba(255,255,255,.02);
 
-    bottom:-60px;
-    left:-60px;
+    bottom:-70px;
+    left:-70px;
 }
 
 .contact-section__title{
-    font-size:3.2rem;
-    line-height:1.05;
+
+    font-size:2.5rem;
+
+    line-height:1.1;
+
     color:#fff;
-    margin-bottom:1.5rem;
+
+    margin-bottom:1.2rem;
+
     font-weight:600;
+
     position:relative;
+
     z-index:2;
 }
 
 .contact-section__text{
-    color:#dbe4f0;
+
+    color:#D7E1EE;
+
     line-height:1.8;
-    font-size:1rem;
-    max-width:360px;
+
+    font-size:.95rem;
+
+    max-width:330px;
+
     position:relative;
+
     z-index:2;
 }
 
 .contact-section__form{
-    padding:3rem;
-    background:#fff;
+    padding:2.7rem;
 }
 
 .contact-section__group{
+
     display:grid;
+
     grid-template-columns:repeat(2,1fr);
-    gap:1.2rem;
+
+    gap:1rem;
 }
 
 .contact-section__field input,
@@ -131,9 +159,9 @@ body{
 
     width:100%;
 
-    padding:1rem 1.2rem;
+    padding:1rem 1.1rem;
 
-    border-radius:16px;
+    border-radius:14px;
 
     border:1px solid #E2E8F0;
 
@@ -141,7 +169,7 @@ body{
 
     font-family:'Poppins',sans-serif;
 
-    font-size:.95rem;
+    font-size:.92rem;
 
     color:#162447;
 
@@ -152,7 +180,7 @@ body{
 
 .contact-section__field textarea{
     resize:none;
-    min-height:140px;
+    min-height:130px;
 }
 
 .contact-section__field:nth-child(7),
@@ -160,7 +188,6 @@ body{
 .contact-section__btn{
     grid-column:1/-1;
 }
-
 
 .contact-section__field input:focus,
 .contact-section__field select:focus,
@@ -171,9 +198,8 @@ body{
     border-color:#567c8d;
 
     box-shadow:
-    0 0 0 4px rgba(86,124,141,.10);
+    0 0 0 4px rgba(86,124,141,.08);
 }
-
 
 .contact-section__field input::placeholder,
 .contact-section__field textarea::placeholder{
@@ -182,19 +208,19 @@ body{
 
 .contact-section__btn{
 
-    margin-top:.5rem;
+    margin-top:.3rem;
 
     padding:1rem;
 
     border:none;
 
-    border-radius:16px;
+    border-radius:14px;
 
     background:#162447;
 
     color:#fff;
 
-    font-size:1rem;
+    font-size:.95rem;
 
     font-weight:500;
 
@@ -210,7 +236,6 @@ body{
     transform:translateY(-2px);
 }
 
-
 @media(max-width:950px){
 
     .contact-section__container{
@@ -218,8 +243,11 @@ body{
     }
 
     .contact-section__info{
+
         padding:3rem 2.5rem;
+
         text-align:center;
+
         align-items:center;
     }
 
@@ -235,8 +263,12 @@ body{
         padding:1rem;
     }
 
+    .contact-section__container{
+        border-radius:22px;
+    }
+
     .contact-section__form{
-        padding:1.5rem;
+        padding:1.4rem;
     }
 
     .contact-section__info{
@@ -248,11 +280,7 @@ body{
     }
 
     .contact-section__title{
-        font-size:2.3rem;
-    }
-
-    .contact-section__container{
-        border-radius:22px;
+        font-size:2rem;
     }
 
 }

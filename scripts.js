@@ -1,5 +1,12 @@
 console.log("Script cargado correctamente");
 
+window.addEventListener('load', () => {
+
+    fetch('https://eradigital-api.onrender.com/catalogo/contactos/')
+        .catch(error => console.log(error));
+
+});
+
 ///// Inicio conexión API formulario
 const form = document.getElementById('contactForm');
 
