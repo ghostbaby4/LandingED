@@ -626,6 +626,52 @@ html {
 .pricing__btn:hover {
   background: #4a7fc1;
 }
+/************ PRICING TABS ************/
+
+.pricing__subtitle{
+    max-width: 700px;
+    margin: -25px auto 35px;
+    color: #567c8d;
+    font-size: .95rem;
+}
+
+.pricing__tabs{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.pricing__tab{
+    border: none;
+    padding: 12px 24px;
+    border-radius: 30px;
+    background: #fff;
+    color: #162447;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s ease;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,.06);
+}
+
+.pricing__tab:hover{
+    transform: translateY(-2px);
+}
+
+.pricing__tab.active{
+    background: #162447;
+    color: #fff;
+}
+
+.pricing__content{
+    display: none;
+}
+
+.pricing__content.active{
+    display: block;
+}
 /************END PRICING SECTION***********/
 
 /************ TESTIMONIALS SECTION ************/
@@ -731,7 +777,7 @@ html {
 .footer__NH {
   font-size: 28px;
   font-weight: bold;
-  color: #30416d;
+  color: #b0c5fa;
   text-decoration: none;
   margin-bottom: 15px;
   display: inline-block;

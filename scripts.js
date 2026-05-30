@@ -181,5 +181,31 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 /////Fin de la animación scroll
 
+//Inicio de animación de tarjetas de precios
+const pricingTabs = document.querySelectorAll('.pricing__tab');
+
+pricingTabs.forEach(tab => {
+
+    tab.addEventListener('click', () => {
+
+        document
+            .querySelectorAll('.pricing__tab')
+            .forEach(btn => btn.classList.remove('active'));
+
+        document
+            .querySelectorAll('.pricing__content')
+            .forEach(content => content.classList.remove('active'));
+
+        tab.classList.add('active');
+
+        document
+            .getElementById(tab.dataset.target)
+            .classList.add('active');
+
+    });
+
+});
+//Fin de animación de tarjetas de precios
+
 
 
