@@ -277,14 +277,5 @@ setInterval(()=>{
 
 },5000);
 
-function trackPromo(nombrePromo){
-
-    gtag('event', 'solicitar_promocion', {
-
-        promocion: nombrePromo
-
-    });
-
-}
 
 
