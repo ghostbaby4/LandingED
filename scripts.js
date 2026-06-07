@@ -207,5 +207,84 @@ pricingTabs.forEach(tab => {
 });
 //Fin de animación de tarjetas de precios
 
+const slides = document.querySelectorAll('.promo__slide');
+const dots = document.querySelectorAll('.promo__dot');
+
+const prevBtn = document.querySelector('.promo__arrow--left');
+const nextBtn = document.querySelector('.promo__arrow--right');
+
+let currentSlide = 0;
+
+function showSlide(index){
+
+    slides.forEach(slide =>
+        slide.classList.remove('active')
+    );
+
+    dots.forEach(dot =>
+        dot.classList.remove('active')
+    );
+
+    slides[index].classList.add('active');
+    dots[index].classList.add('active');
+}
+
+nextBtn.addEventListener('click', () => {
+
+    currentSlide++;
+
+    if(currentSlide >= slides.length){
+        currentSlide = 0;
+    }
+
+    showSlide(currentSlide);
+
+});
+
+prevBtn.addEventListener('click', () => {
+
+    currentSlide--;
+
+    if(currentSlide < 0){
+        currentSlide = slides.length - 1;
+    }
+
+    showSlide(currentSlide);
+
+});
+
+dots.forEach((dot,index)=>{
+
+    dot.addEventListener('click',()=>{
+
+        currentSlide = index;
+
+        showSlide(currentSlide);
+
+    });
+
+});
+
+setInterval(()=>{
+
+    currentSlide++;
+
+    if(currentSlide >= slides.length){
+        currentSlide = 0;
+    }
+
+    showSlide(currentSlide);
+
+},5000);
+
+function trackPromo(nombrePromo){
+
+    gtag('event', 'solicitar_promocion', {
+
+        promocion: nombrePromo
+
+    });
+
+}
 
 

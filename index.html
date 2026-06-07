@@ -67,8 +67,8 @@
             </li>
 
             <li>
-                <a href="login.html" class="nav__login-btn">
-                    Iniciar Sesión
+                <a href="#promociones" class="nav__login-btn">
+                    Promociones
                 </a>
             </li>
 
@@ -412,6 +412,91 @@
         </div>
     </div>
 </section>
+
+<!------------- PROMOCIONES ------------->
+
+<section class="promo" id="promociones">
+
+    <div class="promo__header">
+
+        <h2 class="promo__title">
+            Aprovecha nuestras ofertas especiales
+        </h2>
+
+    </div>
+
+    <div class="promo__slider">
+
+        <button class="promo__arrow promo__arrow--left">
+            &#10094;
+        </button>
+
+        <div class="promo__track">
+
+            <div class="promo__slide active">
+
+                <img src="img/promo_1.png"
+                     alt="Combo Empresarial">
+
+                <a href="contact.html?promo=combo_empresarial"
+                   class="promo__btn"
+                   onclick="trackPromo('combo_empresarial')">
+
+                    Solicitar
+
+                </a>
+
+            </div>
+
+            <div class="promo__slide">
+
+                <img src="img/promo_2.png"
+                     alt="Mantenimiento Preventivo">
+
+                <a href="contact.html?promo=mantenimiento_preventivo"
+                   class="promo__btn"
+                   onclick="trackPromo('mantenimiento_preventivo')">
+
+                    Solicitar
+
+                </a>
+
+            </div>
+
+            <div class="promo__slide">
+
+                <img src="img/promo_3.png"
+                     alt="Soporte Técnico">
+
+                <a href="contact.html?promo=soporte_tecnico"
+                   class="promo__btn"
+                   onclick="trackPromo('soporte_tecnico')">
+
+                    Solicitar
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <button class="promo__arrow promo__arrow--right">
+            &#10095;
+        </button>
+
+    </div>
+
+    <div class="promo__dots">
+
+        <span class="promo__dot active"></span>
+        <span class="promo__dot"></span>
+        <span class="promo__dot"></span>
+
+    </div>
+
+</section>
+
+<!------------- END PROMOCIONES ------------->
     
     <!--Footer-->
     <footer class="footer">
