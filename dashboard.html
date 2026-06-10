@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | EraDigital</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="styledashboard.css">
+</head>
+<body>
+
+    <div class="dashboard-layout">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <div class="sidebar-logo">
+
+                <h2>EraDigital</h2>
+
+            </div>
+
+            <nav class="sidebar-nav">
+
+                <a href="#" class="active">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="index.html">
+                    <i class="fas fa-globe"></i>
+                    <span>Landing Page</span>
+                </a>
+
+                <a href="#promociones">
+                    <i class="fas fa-bullhorn"></i>
+                    <span>Promociones</span>
+                </a>
+
+            </nav>
+
+            <div class="sidebar-footer">
+
+                <a href="index.html">
+                    <i class="fas fa-arrow-left"></i>
+                    Cerrar sesión
+                </a>
+
+            </div>
+
+        </aside>
+
+        <!-- Main -->
+        <main class="main-content">
+
+            <header class="dashboard-header">
+
+                <div>
+
+                    <h1>Dashboard Analítico</h1>
+
+                    <p>
+                        Métricas obtenidas mediante Google Analytics 4 y Power BI
+                    </p>
+
+                </div>
+
+            </header>
+
+            <!-- Dashboard -->
+            <section class="dashboard-card">
+
+                <iframe
+                    title="dashboardED"
+                    src="https://app.powerbi.com/view?r=eyJrIjoiZDIxM2RlZWYtYzBjNC00M2FmLThjYzctYjQwMWUxOWMzOGQ2IiwidCI6ImU0NzY0NmZlLWRhMjctNDUxOC04NDM2LTVmOGIxNThiYTEyNyIsImMiOjR9"
+                    allowfullscreen>
+                </iframe>
+
+            </section>
+
+        </main>
+        </html>
+    
+
+    </div>
+    <script>
+
+if(localStorage.getItem("login") !== "true"){
+
+    window.location.href = "login.html";
+
+}
+
+</script>
+
+</body>
+
+
