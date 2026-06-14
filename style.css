@@ -895,6 +895,57 @@ html {
     }
 
 }
+/* ===== BTN WhatsApp ===== */
+.whatsapp-float{
+
+    position:fixed;
+
+    right:25px;
+    bottom:25px;
+
+    width:65px;
+    height:65px;
+
+    background:#25D366;
+
+    color:white;
+
+    border-radius:50%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-decoration:none;
+
+    box-shadow:
+    0 8px 25px rgba(37,211,102,.35);
+
+    z-index:9999;
+
+    transition:.3s ease;
+}
+
+.whatsapp-float:hover{
+
+    transform:translateY(-4px) scale(1.05);
+
+    box-shadow:
+    0 12px 30px rgba(37,211,102,.45);
+}
+
+@media(max-width:768px){
+
+    .whatsapp-float{
+
+        width:58px;
+        height:58px;
+
+        right:18px;
+        bottom:18px;
+    }
+
+}
 
 /* ===== FOOTER ===== */
 
