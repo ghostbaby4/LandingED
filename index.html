@@ -390,6 +390,82 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 </footer>
 <!-- End Footer -->
+ 
+<!-- ASISTENTE DE ORIENTACIÓN AL CLIENTE -->
+<div class="asistente" id="asistente">
+    <button
+        type="button"
+        class="asistente__boton"
+        id="asistente-boton"
+        aria-label="Abrir asistente de Era Digital"
+        aria-expanded="false"
+        aria-controls="asistente-ventana">
+
+        <i class="bx bx-message-rounded-dots"></i>
+    </button>
+    <section
+        class="asistente__ventana"
+        id="asistente-ventana"
+        aria-label="Asistente de orientación"
+        hidden>
+
+        <header class="asistente__encabezado">
+            <div>
+                <h2>Asistente Era Digital</h2>
+                <p>¿En qué podemos ayudarte?</p>
+            </div>
+
+            <button
+                type="button"
+                class="asistente__cerrar"
+                id="asistente-cerrar"
+                aria-label="Cerrar asistente">
+                &times;
+            </button>
+        </header>
+
+        <div
+            class="asistente__mensajes"
+            id="asistente-mensajes"
+            aria-live="polite"
+            aria-atomic="false">
+
+            <p class="asistente__mensaje asistente__mensaje--bot">
+                ¡Hola! 👋 Soy el asistente de Era Digital.
+                Puedo orientarte sobre nuestros servicios.
+                ¿Qué problema necesitas resolver?
+            </p>
+
+        </div>
+
+        <div class="asistente__opciones" id="asistente-opciones">
+            <button type="button" data-opcion="equipo">
+                Mi equipo está lento
+            </button>
+
+            <button type="button" data-opcion="conexion">
+                Tengo problemas de conexión
+            </button>
+
+            <button type="button" data-opcion="mantenimiento">
+                Necesito mantenimiento
+            </button>
+
+            <button type="button" data-opcion="servicios">
+                Consultar servicios
+            </button>
+        </div>
+
+        <a
+            class="asistente__contacto"
+            href="contact.html"
+            id="asistente-contacto">
+            Solicitar un servicio
+        </a>
+
+    </section>
+</div>
+<!-- FIN ASISTENTE -->
  <!-- btn whatsapp -->
  <a href="https://wa.me/50589033169"
    class="whatsapp-float"
